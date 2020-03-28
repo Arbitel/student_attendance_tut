@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ScheduleContainer from "./components/containers/SchedulerContainer";
+import StudentContainer from "./components/containers/StudentsContainer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <ScheduleContainer />
+        <StudentContainer />
+      </Fragment>
+    );
+  }
 }
 
 export default App;
